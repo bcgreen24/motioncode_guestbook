@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Implements hook_schema.
+ */
+function guestbook_schema(){
+    $schema = [];
+    $schema['guestbook'] = [
+        'description' => 'Table for guestbook entries',
+        'fields' => [
+            'id' => [
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'name' => [
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+            ],
+            'message' => [
+                'type' => 'varchar',
+                'length' => 512,
+                'not null' => TRUE,
+            ],
+            'date' => [
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => TRUE,
+            ],
+
+        ],
+        'primary key' => ['id']
+    ];
+
+    return $schema;
+}
+
+

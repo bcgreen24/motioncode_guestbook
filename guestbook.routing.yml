@@ -1,0 +1,13 @@
+guestbook.view:
+  path: '/guestbook'
+  defaults:
+    _controller: Drupal\guestbook\Controller\GuestbookViewController::guestbook
+    _title: 'Guestbook'
+  requirements:
+    _permission: 'access content'
+guestbook.submit:
+  path: '/guestbook_submit'
+  defaults:
+    _form: Drupal\guestbook\Form\GuestbookSubmitForm
+  requirements:
+    _permission: 'access content'

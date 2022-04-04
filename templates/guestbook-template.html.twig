@@ -1,0 +1,11 @@
+
+<div class="guestbook">
+    {% for entry in entries %}
+        <div class="guestbook_entry">
+            <p class="guestbook_name">{{entry.name}} says:</p>
+            <p class="guestbook_message">{{entry.message}}</p>
+            <p class="guestbook_date">Posted on: {{entry.date}}</p>
+        </div>
+    {% endfor %}
+</div>
+
